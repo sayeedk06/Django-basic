@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+
+		<div class="col-6 col-md-4 alert alert-success">
+		{% if user.is_authenticated %}			
+			<p>Username: {{ user.username }}</p>
+			<p>Email: {{ user.email }}</p>
+			<p>First Name: {{ user.first_name }}</p>
+			<p>Last Name: {{ user.last_name }}</p>
+		</div>
+		<div class="col-1 col-md-1"></div>
+		<div class="col-11 col-md-7 alert alert-success"">
+			<form method="POST">
+				{% csrf_token %}
+				{{form.as_p}}		
+				<input class="btn btn-success" type="submit" value="Upload">
+			</form>
+		
+		</div>
+		{% endif %}
+	</div>
+<br>
+
+</div>
+
+{% endblock %}

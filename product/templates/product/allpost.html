@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+{% for post in posts %}
+
+<div class="card w-75">
+  <div class="card-body">
+    <h5 class="card-title">{{post.product_title}}</h5>
+    <p class="card-text">{{post.product_description}}</p>
+    <p class="card-text">BDT{{post.product_price}}</p>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
