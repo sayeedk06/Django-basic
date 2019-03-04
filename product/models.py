@@ -11,6 +11,7 @@ class UserProduct(models.Model):
     price_negotiable = models.CharField(max_length=50) # No or Yes or little
     product_usage_age = models.CharField(max_length=200) # brand_new or 7 days or 6 months
     product_warranty = models.CharField(max_length=100) # 1 year or 4 months or none
+    product_category = models.CharField(max_length=50)
 
     # Create a directory in project directory (same location of manage.py file)
     product_image = models.FileField(upload_to = 'product_image/', default = 'product_image/no_image.png')

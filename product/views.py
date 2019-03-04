@@ -11,11 +11,15 @@ def allpost(request,pk = None):
 	if(pk):
 		allpost = UserProduct.objects.filter(seller_city = pk)
 		return render(request,'product/allpost.html',{'posts':allpost})
+
 	else:
 		allpost = UserProduct.objects.all()
 		return render(request,'product/allpost.html',{'posts':allpost})
 
-
-
-
-UserProduct.objects.values('seller_city').annotate(city=Min('seller_city'))
+def categoryPost(request,category = None):
+	if(category):
+		allpost = UserProduct.objects.filter(product_category = category)
+		return render(request,'product/allpost.html',{'posts':allpost})
+	else:
+		allpost = UserProduct.objects.all()
+		return render(request,'product/allpost.html',{'posts':allpost})

@@ -7,11 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-    <title>Bikroy.com</title>
+    <!-- Bootstrap icon link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Bikroy</title>
   </head>
   <body>
-  
+
 
     <!-- NAVBAR STARTS HERE -->
 
@@ -46,7 +49,7 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
   </div>
-  </div>  
+  </div>
 </nav>
 <br>
 <!--NAVBAR ENDS HERE -->
@@ -67,6 +70,86 @@
     {% block content%}
 
     {% endblock %}
+    <br>
+    <br>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-light">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+              <!-- Content -->
+              <br>
+              <h5 class="text-uppercase text-success">Bikroy</h5>
+              <p class="text-success">Biggest Market place in Bangladesh.</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">categories</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="{% url 'categoryPost' category='Electronics'%}">Electronics</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'categoryPost' category='Vehicles'%}">Vehicles</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'categoryPost' category='Properties'%}">Properties</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">site links</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="{% url 'user_login' %}">Log in</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'user_register' %}">Registration</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 bg-success text-light">© 2018 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/"> Bikroy</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+      <!-- Footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
